@@ -6,7 +6,8 @@ description: >
   Google search results) and in your feed.xml site description.
 url: "https://harmtemolder.github.io"
 baseurl: "/com"
-permalink: ':title/'
+images: "/com/assets/images"
+permalink: ":title/"
 
 # Author Settings
 author: Harm te Molder
