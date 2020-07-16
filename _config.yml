@@ -18,9 +18,6 @@ social-github: artemsheludko # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email: # add your Email address
 
-# Disqus
-discus-identifier: mr-brown # add your discus identifier
-
 # Tracker
 analytics: # Google Analytics
 
@@ -34,4 +31,7 @@ plugins:
 paginate: 8
 paginate_path: "/page/:num"
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+exclude:
+  Gemfile
+  README.md
+  LICENSE
