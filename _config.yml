@@ -11,7 +11,7 @@ permalink: :title/
 # Author Settings
 author: Harm te Molder
 author-img: harm-te-molder-400.png
-author-about: I work as a data engineer, focusing on marketing data. CDPs, tag managers and BigQuery hold no secrets for me.
+author-about: I work as a data engineer, focusing on marketing data. That means CDPs, tag managers and DataFrames hold no secrets from me.
 social-email: mail@harmtemolder.com
 social-github: harmtemolder
 social-linkedin: harmtemolder
@@ -27,9 +27,16 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
+  - jekyll-compress-images
 paginate: 5
 paginate_path: /page/:num
 exclude:
   - Gemfile
   - README.md
   - LICENSE
+sass:
+  style: compressed
+compress_images:
+  images_path: "assets/images/**/*.{gif,png,jpg,jpeg,svg}"
+imageoptim:
+  verbose: false
