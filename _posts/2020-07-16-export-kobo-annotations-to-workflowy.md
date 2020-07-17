@@ -48,3 +48,5 @@ If you add your own notes to your ebooks as well, you might want to take a look 
 [Unfortunately WorkFlowy does not have an API yet](https://workflowy.zendesk.com/hc/en-us/community/posts/201100295-API), so we'll have to make do with pasting plain text into a bullet. To do so, I wrote a loop that outputs all my highlights to a string with new lines (`\n`) starting with dashes and proper indenting with tabs (`\t`). I then print this to my console and copy and paste it into WorkFlowy. Et voila:
 
 ![Kobo SQLite Database]({{ site.images }}/kobo-annotations-in-workflowy.png)
+
+Ready to try it yourself? All of my work—except for the actual database of highlights—is [on GitHub](https://github.com/harmtemolder/kobo-annotations-to-workflowy).
