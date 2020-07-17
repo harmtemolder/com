@@ -36,23 +36,18 @@ layout: default
               <i class="fa fa-linkedin"></i>
             </a>
           </li>
-        {% else %}
-          <li class="linkedin">
-            <a href="https://in.linkedin.com/" target="_blank">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-          </li>
         {% endif %}
         {% if site.social-email %}
           <li class="email">
             <a href="mailto:{{site.social-email}}">
-              <i class="fa fa-envelope-o"></i>
+              <i class="fa fa-envelope"></i>
             </a>
           </li>
-        {% else %}
-          <li class="email">
-            <a href="mailto:example.david@blog.com">
-              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        {% endif %}
+        {% if site.social-whatsapp %}
+          <li class="whatsapp">
+            <a href="https://wa.me/{{site.social-whatsapp}}">
+              <i class="fa fa-whatsapp"></i>
             </a>
           </li>
         {% endif %}
