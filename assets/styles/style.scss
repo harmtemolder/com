@@ -16,12 +16,16 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: $body-font;
   color: $body-color;
   background-color: #fbfbfb;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: $title-font;
 }
 
 h1 {
@@ -67,6 +71,10 @@ pre {
     word-wrap: break-word;
     word-break: break-all;
   }
+}
+
+code {
+  font-family: $code-font;
 }
 
 table {
@@ -150,11 +158,11 @@ table tfoot td {
 .clearfix::after {
   clear: both;
 }
-/* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
+{% comment %} Home Page Styles {% endcomment %}
 @import 'parts/home-page';
-/* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
+{% comment %}  Post Page Styles {% endcomment %}
 @import 'parts/post-page';
-/* - - - - - - - - - - Tag Styles - - - - - - - - - - */
+{% comment %}  Tag Styles {% endcomment %}
 @import 'parts/tag';
-/* - - - - - - - - - - Media Styles - - - - - - - - - - */
+{% comment %}  Media Styles {% endcomment %}
 @import 'media';
