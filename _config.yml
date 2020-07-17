@@ -1,13 +1,12 @@
 # Site Settings
 title: Harm te Molder
-description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-url: "https://harmtemolder.github.io"
-baseurl: "/com"
-images: "/com/assets/images"
-permalink: ":title/"
+description: I work as a data engineer, focusing on marketing data. CDPs, tag managers and BigQuery hold no secrets for me.
+url: https://harmtemolder.github.io
+baseurl: /com
+images: /com/assets/images
+styles: /com/assets/styles
+fonts: /com/assets/fonts
+permalink: :title/
 
 # Author Settings
 author: Harm te Molder
@@ -28,7 +27,7 @@ plugins:
   - jemoji
 
 paginate: 5
-paginate_path: "/page/:num"
+paginate_path: /page/:num
 
 exclude:
   - Gemfile
