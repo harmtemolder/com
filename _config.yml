@@ -12,9 +12,10 @@ permalink: :title/
 author: Harm te Molder
 author-img: harm-te-molder-400.png
 author-about: I work as a data engineer, focusing on marketing data. CDPs, tag managers and BigQuery hold no secrets for me.
+social-email: mail@harmtemolder.com
 social-github: harmtemolder
 social-linkedin: harmtemolder
-social-email: mail@harmtemolder.com
+social-twitter: harmtemolder
 
 # Analytics Settings
 google-tag-manager: GTM-P68W9HB
@@ -25,10 +26,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
-
 paginate: 5
 paginate_path: /page/:num
-
 exclude:
   - Gemfile
   - README.md

@@ -4,7 +4,7 @@ title: How to export Kobo Annotations to WorkFlowy
 date: 2020-07-16 12:08:00 -0400
 description: Ever wonder how to get your highlights from your Kobo into WorkFlowy?
 img: kobo-database-reader.png
-fig-caption: KoboDatabaseReader
+img-caption: KoboDatabaseReader
 tags: [WorkFlowy, Python, Kobo]
 categories: [Books]
 ---

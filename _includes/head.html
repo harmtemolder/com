@@ -1,96 +1,84 @@
 <head>
+
+{% comment %} Functional Meta Tags {% endcomment %}
+
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<base href="{{ site.url }}{{ site.baseurl }}/">
+
 	{% include google-tag-manager.html %}
+
+{% comment %} Generic Meta Tags {% endcomment %}
+
 	<title>
-		{% if page.title %}{{page.title}}
-			-
+		{% if page.title %}
+			{{page.title}}
+			—
 			{{site.title}}
-		{% else %}{{site.title}}
+		{% else %}
+			{{site.title}}
 		{% endif %}
 	</title>
 
-	<!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+	<meta name="author" content="{{ site.author }}">
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
+{% comment %} Open Graph (https://ogp.me/) {% endcomment %}
+
+	<meta content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" property="og:title">
+	<meta content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" property="og:type">
+	<meta content="{{ site.url }}{{ site.images }}/{% if page.img %}{{ page.img }}{% else %}{{ site.author-img }}{% endif %}" property="og:image">
+	<meta content="{{ site.url }}{{ site.baseurl }}{% if page.url %}{{ page.url }}{% endif %}" property="og:url">
+	<meta content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" property="og:description">
 	<meta content="{{ site.title }}" property="og:site_name">
-	{% if page.title %}
-		<meta content="{{ page.title }}" property="og:title">
-	{% else %}
-		<meta content="{{ site.title }}" property="og:title">
-	{% endif %}
-	{% if page.title %}
-		<meta content="article" property="og:type">
-	{% else %}
-		<meta content="website" property="og:type">
-	{% endif %}
-	{% if page.description %}
-		<meta content="{{ page.description }}" property="og:description">
-	{% else %}
-		<meta content="{{ site.description }}" property="og:description">
-	{% endif %}
-	{% if page.url %}
-		<meta content="{{ site.url }}{{ page.url }}" property="og:url">
-	{% endif %}
-	{% if page.date %}
+
+{% comment %} Open Graph/Article (https://ogp.me/#type_article) {% endcomment %}
+
+	{% if page.layout == 'post' %}
+
 		<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-		<meta content="{{ site.url }}/about/" property="article:author">
-	{% endif %}
-	{% if page.img %}
-		<meta content="{{ site.url }}{{ site.images }}/{{ page.img }}" property="og:image">
-	{% else %}
-		<meta content="{{ site.url }}{{ site.images }}/{{ site.author-img }}" property="og:image">
-	{% endif %}
-	{% if page.categories %}
+		<meta content="{{ site.author }}" property="article:author">
+
 		{% for category in page.categories limit : 1 %}
 			<meta content="{{ category }}" property="article:section">
 		{% endfor %}
-	{% endif %}
-	{% if page.tags %}
+
 		{% for tag in page.tags %}
 			<meta content="{{ tag }}" property="article:tag">
 		{% endfor %}
+
 	{% endif %}
+
+{% comment %} Twitter Card (https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary) {% endcomment %}
 
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@{{ site.site-twitter }}">
+	<meta name="twitter:site" content="@{{ site.social-twitter }}">
 	<meta name="twitter:creator" content="@{{ site.social-twitter }}">
-	{% if page.title %}
-		<meta name="twitter:title" content="{{ page.title }}">
-	{% else %}
-		<meta name="twitter:title" content="{{ site.title }}">
-	{% endif %}
-	{% if page.url %}
-		<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-	{% endif %}
-	{% if page.description %}
-		<meta name="twitter:description" content="{{ page.description }}">
-	{% else %}
-		<meta name="twitter:description" content="{{ site.description }}">
-	{% endif %}
-	{% if page.img %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img }}">
-	{% else %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ site.author-img }}">
-	{% endif %}
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="twitter:image" content="{{ site.url }}{{ site.images }}/{% if page.img %}{{ page.img }}{% else %}{{ site.author-img }}{% endif %}">
+	<meta name="twitter:image:alt" content="{% if page.img %}{{ page.img-caption }}{% else %}{{ site.author }}{% endif %}">
 
-	<meta name="description" content="{{ page.description }}">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta property="og:image" content="">
+{% comment %} Icons {% endcomment %}
+
 	<link rel="shortcut icon" href="{{ site.images }}/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="{{ site.images }}/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="{{ site.images }}/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="{{ site.images }}/favicon/apple-touch-icon-144x144.png">
+
+{% comment %} Browser colors {% endcomment %}
+
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#263959">
 	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#263959">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
-	<!-- Google Fonts -->
+
+{% comment %} Links {% endcomment %}
+
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
-	<!-- Font Awesome -->
 	<link rel="stylesheet" href="{{ site.fonts }}/font-awesome/css/font-awesome.min.css">
-	<!-- Styles -->
-	<link rel="stylesheet" href="{{ site.styles }}/main.css">
 	<link rel="stylesheet" href="{{ site.styles }}/style.css">
+
 </head>
