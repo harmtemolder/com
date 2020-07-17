@@ -11,7 +11,7 @@ layout: main
             <figcaption>{{page.img-caption}}</figcaption>
           {% endif %}
         </figure>
-      </div><!-- End Page Cover Image -->
+      </div>{% comment %} End Page Cover Image {% endcomment %}
     {% endif %}
     <div class="wrap-content">
       <header class="header-page">
@@ -23,11 +23,11 @@ layout: main
       <div class="page-footer">
         <div class="page-tag">
           {% for tag in page.tags %}
-            <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35;
+            <a href="{{ site.url }}{{site.baseurl}}/tags#{{tag}}" class="tag">&#35;
               {{ tag }}</a>
           {% endfor %}
         </div>
       </div>
-    </div><!-- End Wrap Content -->
-  </div><!-- End Page Content -->
-</article><!-- End Article Page -->
+    </div>{% comment %} End Page Cover Image {% endcomment %}
+  </div>{% comment %} End Page Cover Image {% endcomment %}
+</article>{% comment %} End Page Cover Image {% endcomment %}
