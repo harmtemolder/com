@@ -22,7 +22,7 @@
     margin: 0 auto 10px;
     border-radius: 100%;
     overflow: hidden;
-    background-color: $darker;
+    background-color: $black;
   }
 
   img {
@@ -38,31 +38,18 @@
 
   .author-name {
     font-family: $title-font;
-    margin: 0 0 10px;
     position: relative;
-    padding-bottom: 15px;
     font-size: 16px;
     text-transform: uppercase;
     color: $darker;
     font-weight: 700;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
-      display: block;
-      width: 7px;
-      height: 7px;
-      border-radius: 100%;
-      background-color: $darker;
-    }
   }
 
   p {
     font-size: 16px;
-    margin: 0 0 10px;
+    margin: 10px 10px;
+    text-align: justify;
+    text-justify: auto;
   }
 }
 
