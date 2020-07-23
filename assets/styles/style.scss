@@ -2,7 +2,7 @@
 ---
 
 @import 'normalize';
-@import 'monokai';
+@import 'solarized-dark';
 @import 'variables';
 
 *,
@@ -85,7 +85,7 @@ pre {
 }
 
 code {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-family: $code-font;
 }
 
