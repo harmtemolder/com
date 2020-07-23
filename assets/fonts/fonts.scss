@@ -39,12 +39,15 @@ fonts:
       - style: italic
         weight: 400
         file: italic
+        local-suffix: " Italic"
       - style: normal
         weight: bold
         file: 600
+        local-suffix: " Bold"
       - style: italic
         weight: bold
         file: 600italic
+        local-suffix: " Bold Italic"
 ---
 
 {% for font in page.fonts %}
@@ -56,7 +59,7 @@ fonts:
       font-weight: {{ variant.weight }};
       font-display: swap;
       src: url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.eot");
-      src: local("{{ font.family }}"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.eot?#iefix") format("embedded-opentype"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.woff2") format("woff2"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.woff") format("woff"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.ttf") format("truetype"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.svg#{{ font.family }}") format("svg");
+      src: local("{{ font.family }}{{ variant.local-suffix}}"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.eot?#iefix") format("embedded-opentype"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.woff2") format("woff2"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.woff") format("woff"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.ttf") format("truetype"), url("{{ site.fonts }}/{{ font.filename }}{{ variant.file }}.svg#{{ font.family }}") format("svg");
     }
 
   {% endfor %}

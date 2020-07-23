@@ -24,14 +24,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: $title-font;
-  font-weight: 400;
   color: $darkest;
 }
 
-h1 {
-  // font-weight: 400;
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 600;
 }
 
 a {
