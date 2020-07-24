@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to export Kobo Annotations to WorkFlowy
+title: How to export Kobo highlights to WorkFlowy
 date: 2020-07-16 12:08:00 -0400
 description: Ever wonder how to get your highlights from your Kobo into WorkFlowy?
 img: kobo-highlight.png
