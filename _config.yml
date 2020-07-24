@@ -35,6 +35,7 @@ exclude:
   - README.md
   - LICENSE
   - _compress_images_cache.yml
+  - serve.sh
 sass:
   style: compressed
 compress_images:
