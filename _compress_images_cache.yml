@@ -10,3 +10,9 @@ assets/images/oura-screenshot.png: oura-screenshot.png
 assets/images/personal-log-to-excel.png: personal-log-to-excel.png
 assets/images/personal-log-vs-oura-sleep-jupyter-notebook.png: personal-log-vs-oura-sleep-jupyter-notebook.png
 assets/images/personal-log-boxplots.png: personal-log-boxplots.png
+assets/images/karabiner-disable-escape.png: karabiner-disable-escape.png
+assets/images/karabiner-caps-lock-to-escape.png: karabiner-caps-lock-to-escape.png
+assets/images/karabiner-empty.png: karabiner-empty.png
+assets/images/karabiner-complex-modifications-json.png: karabiner-complex-modifications-json.png
+assets/images/karabiner-complex-modifications-repository.png: karabiner-complex-modifications-repository.png
+assets/images/karabiner-import-complex-modifications.png: karabiner-import-complex-modifications.png
