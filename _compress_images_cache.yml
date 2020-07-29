@@ -16,3 +16,5 @@ assets/images/karabiner-empty.png: karabiner-empty.png
 assets/images/karabiner-complex-modifications-json.png: karabiner-complex-modifications-json.png
 assets/images/karabiner-complex-modifications-repository.png: karabiner-complex-modifications-repository.png
 assets/images/karabiner-import-complex-modifications.png: karabiner-import-complex-modifications.png
+assets/images/vintage-typewriter.jpg: vintage-typewriter.jpg
+assets/images/karabiner-import-vim-mode-plus.png: karabiner-import-vim-mode-plus.png
