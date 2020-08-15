@@ -1,8 +1,10 @@
 # harmtemolder.com
 
 ## Serve locally using Jekyll
-* `exec bundle jekyll serve`
-* Go to [localhost:4000/com/](http://localhost:4000/com/)
+* `./serve.sh`*
+* Go to [localhost:4000/](http://localhost:4000/)
+
+*This serves the site without watching for changes, but with all drafts and future posts. Use <kbd>control</kbd>+<kbd>C</kbd> to stop, followed by <kbd>↑</kbd> and <kbd>Enter</kbd> to rebuild.
 
 ## Credits
 

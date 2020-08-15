@@ -1,11 +1,11 @@
 # Site Settings
 title: Harm te Molder
 description: I work as a data engineer, focusing on marketing data. CDPs, tag managers and BigQuery hold no secrets for me.
-url: https://harmtemolder.github.io
-baseurl: /com
-images: /com/assets/images
-styles: /com/assets/styles
-fonts: /com/assets/fonts
+url: https://harmtemolder.com
+# baseurl: 
+images: /assets/images
+styles: /assets/styles
+fonts: /assets/fonts
 permalink: :title/
 
 # Author Settings
