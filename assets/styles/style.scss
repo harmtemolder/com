@@ -78,17 +78,18 @@ pre {
 
   code {
     border: 0;
-    padding-right: 0;
-    padding-left: 0;
+    font-size: 0.8em;
     overflow: auto;
+    padding-left: 0;
+    padding-right: 0;
     white-space: pre-wrap;
-    word-wrap: break-word;
     word-break: break-all;
+    word-wrap: break-word;
   }
 }
 
 code {
-  font-size: 0.8em;
+  // font-size: 0.8em;
   font-family: $code-font;
 }
 
