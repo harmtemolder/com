@@ -75,6 +75,7 @@ See [the docs](https://www.jetbrains.com/help/pycharm/remote-debugging-with-prod
 
     ![Add content root to project structure in PyCharm]({{ site.images }}/pycharm-project-structure.png)
 
+- Add a path mapping from the absolute path to the `src` directory to “`.`” in the remote debugging configuration
 - Start calibre with `export CALIBRE_DEVELOP_FROM="..."; calibre-debug -g` where `...` is the absolute path to that `src` directory
 
 (Based on [the official documentation](https://manual.calibre-ebook.com/develop.html))
