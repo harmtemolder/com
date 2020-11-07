@@ -5,8 +5,8 @@ date: 2020-07-16 12:08:00 -0400
 description: Ever wonder how to get your highlights from your Kobo into WorkFlowy?
 img: kobo-highlight.png
 img-caption: Highlight on my Kobo Aura
-tags: [WorkFlowy, Python, Kobo]
-categories: [Books]
+tags: [workflowy, python, kobo]
+categories: [books]
 ---
 My whole life goes into WorkFlowy. I have a diary there, all my to-do's, grocery lists, notes, everything. And although you could [read books in WorkFlowy](https://blog.workflowy.com/2016/07/07/books-in-workflowy/), I prefer the comfort of an e-reader. Especially when traveling and offline for days at a time. When reading, I sometimes take notes straight into WorkFlowy on my phone, but it's often more convenient to select a piece of text and add a highlight. But where do those highlights go? And how do you get them out?
 

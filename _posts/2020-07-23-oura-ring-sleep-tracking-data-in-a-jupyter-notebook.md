@@ -5,8 +5,8 @@ date: 2020-07-23 09:46:00 -0400
 description: In case the Oura app does not give you the insights you are looking for, Jupyter will.
 img: oura-screenshot.png
 img-caption: Screenshot of my Oura app
-tags: [Oura, Sleep, Jupyter]
-categories: [Sleep]
+tags: [oura, sleep, jupyter]
+categories: [sleep]
 ---
 Don't get me wrong, the Oura app is really well-built. It provides a great way to see how you slept last night or even last week. And to discover trends in all measured variables over even longer periods of time. It also allows you to add tags and comments to a day, so that, looking back, you can see what might have caused a great or poor night's sleep. What it doesn't let you do is deep-dive into those tags. So I've stopped using them, in favor of the following workflow:
 
@@ -109,14 +109,14 @@ Then follow two function definitions to easily draw boxplots and run [*t*-tests]
 Running the `t_test` function without any parameters will combine all tags from your personal logs with the previously defined `y_vars`. It then runs a *t*-test for every combination, testing the hypothesis that the mean from all cases with a tag significantly differ from all cases without that tag. I consider a *p* < 0.05 significant and mark those combinations with asterisks. For example:
 
 ```
-  sleeping mask     on score         :  0.161 (p = 0.872)  
-  sleeping mask     on rem_pct       : -1.821 (p = 0.075)  
-  sleeping mask     on deep_pct      :  0.650 (p = 0.518)  
-  sleeping mask     on restless      : -1.629 (p = 0.110)  
+  sleeping mask     on score         :  0.161 (p = 0.872)
+  sleeping mask     on rem_pct       : -1.821 (p = 0.075)
+  sleeping mask     on deep_pct      :  0.650 (p = 0.518)
+  sleeping mask     on restless      : -1.629 (p = 0.110)
 **sleeping mask     on hr_lowest     : -2.729 (p = 0.010)**
 **sleeping mask     on hr_average    : -2.488 (p = 0.017)**
 **sleeping mask     on rmssd         :  2.693 (p = 0.010)**
-  sleeping mask     on breath_average: -1.727 (p = 0.090)  
+  sleeping mask     on breath_average: -1.727 (p = 0.090)
 ```
 
 So on the nights I wore a sleeping mask my lowest and average heart rate were significantly lower compared to the nights I did not wear one, and my HRV was higher. Conclusion? Wear a sleeping mask more often.

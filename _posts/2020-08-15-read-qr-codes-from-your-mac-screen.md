@@ -5,8 +5,8 @@ date: 2020-08-15 15:15:28 -0400  # use get-date in your terminal
 description: This simple shell alias will let you scan QR codes without having to grab your phone
 img: qr-code-in-iterm.png
 img-caption: A QR code displayed in an iTerm2 window
-tags: [Mac, Terminal, QR]
-categories: [Mac]
+tags: [mac, terminal, qr]
+categories: [mac]
 ---
 A lot of tweaks to my Mac start with the question “How can I do this more efficiently?”. And then I spend an afternoon setting something up that will only shave a couple of minutes off my workflow. But now that I've figured this one out, it should only cost you a minute or so to set it up:
 

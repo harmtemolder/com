@@ -5,8 +5,8 @@ date: 2020-07-29 13:45:48 -0400
 description: I only recently discovered the speed of Vim's navigation. And now I use it everywhere.
 img: vintage-typewriter.jpg
 img-caption: Close-up of a vintage typewriter
-tags: [Mac, Vim, Karabiner]
-categories: [Mac]
+tags: [mac, vim, karabiner]
+categories: [mac]
 ---
 It has been a couple of months since I tumbled down the Karabiner rabbit hole. And it has been glorious ever since: My keyboard becomes more and more efficient every day because of little tweaks to my Karabiner setup. Let me walk you through it. But first, install Karabiner-Elements through [Homebrew](https://brew.sh/):
 
