@@ -44,16 +44,16 @@ See [the docs](https://www.jetbrains.com/help/pycharm/remote-debugging-with-prod
 
 - Figure out where your PyCharm is located and import `pydevd-pycharm` into your plugin from there:
 
-    ```python
-    sys.path.append('/Applications/PyCharm.app/Contents/debug-eggs/pydevd-pycharm.egg')
-    import pydevd_pycharm
-    ```
+  ```python
+  sys.path.append('/Applications/PyCharm.app/Contents/debug-eggs/pydevd-pycharm.egg')
+  import pydevd_pycharm
+  ```
 
 - Add the actual traces to wherever you want to inspect your code:
 
-    ```python
-    pydevd_pycharm.settrace('localhost', port=12345, stdoutToServer=True,stderrToServer=True)
-    ```
+  ```python
+  pydevd_pycharm.settrace('localhost', port=12345, stdoutToServer=True,stderrToServer=True)
+  ```
 
 - Don’t forget to save the files
 
@@ -66,7 +66,7 @@ See [the docs](https://www.jetbrains.com/help/pycharm/remote-debugging-with-prod
 
 ## 5. Ignore the warnings and enjoy stepping through your code:
 
-    ![Remote debugging of a calibre plugin in PyCharm]({{ site.images }}/pycharm-remote-debugging-calibre.png)
+  ![Remote debugging of a calibre plugin in PyCharm]({{ site.images }}/pycharm-remote-debugging-calibre.png)
 
 ## If you also want to step through calibre’s code, do this too:
 
