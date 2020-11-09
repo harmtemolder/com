@@ -17,15 +17,15 @@ Wow, that was a pain. I’ve tried everything*:
 
 *OK, not everything. I could have tried [debugging with Eclipse/PyDev](https://www.mobileread.com/forums/showthread.php?t=143208).
 
-Nothing worked. Until I installed a 30-day trial of PyCharm Professional (I usually use their free Community Edition), which supports remote debugging. This is what I did to make that work:
+Nothing worked on my MacBook (macOS Catalina 10.15.7). Until I installed a 30-day trial of PyCharm Professional (I usually use their free Community Edition), which supports remote debugging. This is what I did to make that work:
 
 ## 1. Set up a PyCharm project
 
-- Create a new project in PyCharm and point it to the directory that hold’s the plugin you’re working on as content root
+- Create a new project in PyCharm and point it to the directory that holds the plugin you’re working on as content root
 
 ## 2. Add remote debugging with path mappings to the project
 
-- In Pycharm, go to “Run” > “Edit Configurations...”
+- In PyCharm, go to “Run” > “Edit Configurations...”
 - Click the “+” on the top left and choose “Python Debug Server”. This should give you something like this:
 
     ![Edit configuration for remote debugging in PyCharm]({{ site.images }}/pycharm-remote-debugging-configuration.png)
@@ -42,29 +42,30 @@ See [the docs](https://www.jetbrains.com/help/pycharm/remote-debugging-with-prod
 
 ## 3. Add the debug server to your plugin
 
-- Figure out where your PyCharm is located and import `pydevd-pycharm` into your plugin from there:
+- Figure out where your PyCharm is located and import `pydevd-pycharm` into your plugin’s `__init__.py` from there:
 
   ```python
   sys.path.append('/Applications/PyCharm.app/Contents/debug-eggs/pydevd-pycharm.egg')
   import pydevd_pycharm
+  pydevd_pycharm.settrace('localhost', stdoutToServer=True, stderrToServer=True, suspend=False)
   ```
 
-- Add the actual traces to wherever you want to inspect your code:
+- Note that the default port is `5678`, so no need to define it if you’re fine with that.
 
-  ```python
-  pydevd_pycharm.settrace('localhost', port=12345, stdoutToServer=True,stderrToServer=True)
-  ```
+## 4. Add breakpoints
 
-- Don’t forget to save the files
+- Click next to the line number in your plugin’s code to add a breakpoint where you want execution to pause, like so:
 
-## 4. Build your plugin and start calibre
+  ![A line breakpoint in PyCharm]({{ site.images }}/pycharm-breakpoint.png)
+
+## 5. Build your plugin and start calibre
 
 - Open up your terminal and `cd` into your plugin’s directory
 - `calibre-customize -b .`
 - `calibre-debug -g`
-- From within the interface do whatever action would trigger the function you added the trace to.
+- From within the interface do whatever action would trigger the function you added the breakpoint to.
 
-## 5. Ignore the warnings and enjoy stepping through your code:
+## 6. Ignore the warnings and enjoy stepping through your code:
 
   ![Remote debugging of a calibre plugin in PyCharm]({{ site.images }}/pycharm-remote-debugging-calibre.png)
 
