@@ -48,9 +48,9 @@
 
     p {
       font-size: 16px;
+      text-align: left;
       margin: 10px;
-      text-align: justify;
-      text-justify: auto;
+      hyphens: auto;
     }
   }
 
@@ -121,6 +121,7 @@
 
         .tooltip {
           font-size: 12px;
+          font-weight: bold;
           white-space: nowrap;
           background-color: $accent;
           color: $lightest;
@@ -131,25 +132,12 @@
           /* Position the tooltip */
           position: absolute;
           z-index: 2;
-          left: 100% + 2px;
           top: -15px;
           /* Fade in tooltip */
           visibility: hidden;
           opacity: 0;
           transition: opacity 0.3s;
         }
-
-        // /* Tooltip arrow */
-        // .tooltip::after {
-        //   content: "";
-        //   position: absolute;
-        //   right: 100%;
-        //   top: 50%;
-        //   margin-left: 5px;
-        //   border-width: 5px;
-        //   border-style: solid;
-        //   border-color: transparent $accent transparent transparent;
-        // }
 
         /* Show the tooltip text when you mouse over the tooltip container */
         .has-tooltip:hover .tooltip {
