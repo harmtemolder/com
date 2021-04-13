@@ -2,21 +2,21 @@
 title: Harm te Molder
 description: I work as a data engineer, focusing on marketing data. CDPs, tag managers and BigQuery hold no secrets for me.
 url: https://harmtemolder.com
-# baseurl: 
+# baseurl:
 images: /assets/images
 styles: /assets/styles
 fonts: /assets/fonts
 permalink: :title/
 
 # Author Settings
-author: Harm te Molder
+author-about: I work as an analytics engineer, focusing on marketing data. That means CDPs, tag managers and DataFrames hold no secrets from me.
 author-img: harm-te-molder-200.png
-author-about: I work as a data engineer, focusing on marketing data. That means CDPs, tag managers and DataFrames hold no secrets from me.
+author: Harm te Molder
 social-email: mail@harmtemolder.com
 social-github: harmtemolder
 social-linkedin: harmtemolder
-social-twitter: harmtemolder
-social-whatsapp: "31642696616"
+social-phone: "+31493219013"
+social-signal: "+31642696616"
 
 # Analytics Settings
 google-tag-manager: GTM-P68W9HB

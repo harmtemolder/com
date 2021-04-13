@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   bottom: 0;
@@ -24,11 +25,13 @@
       overflow: hidden;
 
       img {
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
 
         &:hover {
-          -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+          -webkit-filter: grayscale(0%);
+          /* Safari 6.0 - 9.0 */
           filter: grayscale(0%);
         }
       }
@@ -45,19 +48,20 @@
 
     p {
       font-size: 16px;
-      margin: 10px 10px;
+      margin: 10px;
       text-align: justify;
       text-justify: auto;
     }
   }
 
   footer {
+
     .contact {
       .contact-title {
+        font-size: 12px;
+        font-weight: 400;
         position: relative;
         color: $darker;
-        font-weight: 400;
-        font-size: 12px;
         margin: 0 0 5px;
         text-transform: uppercase;
         text-align: center;
@@ -114,6 +118,44 @@
             }
           }
         }
+
+        .tooltip {
+          font-size: 12px;
+          white-space: nowrap;
+          background-color: $accent;
+          color: $lightest;
+          /* Shape the tooltip */
+          height: 26px;
+          padding: 4px 8px;
+          border-radius: 13px 13px 13px 0;
+          /* Position the tooltip */
+          position: absolute;
+          z-index: 2;
+          left: 100% + 2px;
+          top: -15px;
+          /* Fade in tooltip */
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        // /* Tooltip arrow */
+        // .tooltip::after {
+        //   content: "";
+        //   position: absolute;
+        //   right: 100%;
+        //   top: 50%;
+        //   margin-left: 5px;
+        //   border-width: 5px;
+        //   border-style: solid;
+        //   border-color: transparent $accent transparent transparent;
+        // }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .has-tooltip:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
 
@@ -144,13 +186,15 @@
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 
     &:hover {
       transform: translate(0px, -2px);
       box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2);
-      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      -webkit-filter: grayscale(0%);
+      /* Safari 6.0 - 9.0 */
       filter: grayscale(0%);
     }
 

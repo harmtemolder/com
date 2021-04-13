@@ -20,3 +20,10 @@ assets/images/vintage-typewriter.jpg: vintage-typewriter.jpg
 assets/images/karabiner-import-vim-mode-plus.png: karabiner-import-vim-mode-plus.png
 assets/images/qr-encode-and-read-in-iterm.gif: qr-encode-and-read-in-iterm.gif
 assets/images/qr-code-in-iterm.png: qr-code-in-iterm.png
+assets/images/pycharm-path-mappings.png: pycharm-path-mappings.png
+assets/images/pycharm-remote-debugging-calibre.png: pycharm-remote-debugging-calibre.png
+assets/images/pycharm-project-structure.png: pycharm-project-structure.png
+assets/images/pycharm-remote-debugging-configuration.png: pycharm-remote-debugging-configuration.png
+assets/images/pycharm-breakpoint.png: pycharm-breakpoint.png
+assets/images/matomo-demo.png: matomo-demo.png
+assets/images/pycharm-remote-debugging-calibre-zoomed.png: pycharm-remote-debugging-calibre-zoomed.png

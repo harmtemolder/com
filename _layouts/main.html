@@ -16,38 +16,43 @@ layout: default
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
       <ul>
-        {% if site.social-twitter %}
-          <li>
-            <a href="https://nitter.net/{{ site.social-twitter }}" target="_blank">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-          </li>
-        {% endif %}
         {% if site.social-github %}
           <li class="github">
-            <a href="https://github.com/{{site.social-github}}" target="_blank">
+            <a class="has-tooltip" href="https://github.com/{{site.social-github}}" target="_blank">
               <i class="fa fa-github"></i>
+              <span class="tooltip">Find my repos on GitHub</span>
             </a>
           </li>
         {% endif %}
         {% if site.social-linkedin %}
           <li class="linkedin">
-            <a href="https://www.linkedin.com/in/{{site.social-linkedin}}/" target="_blank">
+            <a class="has-tooltip" href="https://www.linkedin.com/in/{{site.social-linkedin}}/" target="_blank">
               <i class="fa fa-linkedin"></i>
+              <span class="tooltip">Find my achievements on LinkedIn</span>
             </a>
           </li>
         {% endif %}
         {% if site.social-email %}
           <li class="email">
-            <a href="mailto:{{site.social-email}}">
+            <a class="has-tooltip" href="mailto:{{site.social-email}}">
               <i class="fa fa-envelope"></i>
+              <span class="tooltip">Send me an email</span>
             </a>
           </li>
         {% endif %}
-        {% if site.social-whatsapp %}
-          <li class="whatsapp">
-            <a href="https://wa.me/{{site.social-whatsapp}}">
-              <i class="fa fa-whatsapp"></i>
+        {% if site.social-phone %}
+          <li class="phone">
+            <a class="has-tooltip" href="tel:{{ site.social-phone }}" target="_blank">
+              <i class="fa fa-phone"></i>
+              <span class="tooltip">Call me, the old-fashioned way</span>
+            </a>
+          </li>
+        {% endif %}
+        {% if site.social-signal %}
+          <li class="signal">
+            <a class="has-tooltip" href="tel:{{site.social-signal}}">
+              <i class="fa fa-comments"></i>
+              <span class="tooltip">Message me on Signal</span>
             </a>
           </li>
         {% endif %}
